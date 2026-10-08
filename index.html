@@ -5,296 +5,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rana Gamal - Front End Developer Portfolio">
-    <meta name="theme-color" content="#020817">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="theme-color" content="#030712">
 
     <title>Rana Gamal | Front End Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- Scroll progress + animated background -->
+    <div class="scroll_progress" id="scrollProgress"></div>
+    <div class="bg_glow" aria-hidden="true"><span></span><span></span><span></span></div>
 
-    <header class="navbar">
+    <!-- ================= NAVBAR (TOP) ================= -->
 
-        <div class="brand">
+    <header class="navbar" id="navbar">
+
+        <a href="#home" class="brand">
             <img src="images/WhatsApp Image 2026-08-19 at 5.48.26 PM.jpeg" alt="Rana Gamal">
-            <span class="brand_name">Rana Gamal</span>
-        </div>
+            <h1>Rana Gamal</h1>
+        </a>
 
-        <button class="menu_btn" type="button" aria-label="Toggle navigation menu"
-            aria-expanded="false" aria-controls="nav_links">
+        <button class="menu_btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
             <i class="fa-solid fa-bars"></i>
         </button>
 
-        <nav class="nav_links" id="nav_links">
+        <div class="nav_menu" id="navMenu">
 
-            <a href="#home" class="nav_link">Home</a>
-            <a href="#about" class="nav_link">About Me</a>
-            <a href="#services" class="nav_link">What I Do</a>
-            <a href="#resume" class="nav_link">Resume</a>
-            <a href="#portfolio" class="nav_link">Portfolio</a>
-            <a href="#testimonial" class="nav_link">Testimonial</a>
-            <a href="#contact" class="nav_link">Contact Me</a>
+            <nav class="nav_links">
+                <a href="#home" class="nav_link active">Home</a>
+                <a href="#about" class="nav_link">About Me</a>
+                <a href="#services" class="nav_link">What I Do</a>
+                <a href="#resume" class="nav_link">Resume</a>
+                <a href="#portfolio" class="nav_link">Portfolio</a>
+                <a href="#testimonial" class="nav_link">Testimonial</a>
+                <a href="#contact" class="nav_link">Contact Me</a>
+            </nav>
 
             <div class="icons">
-
-                <a href="https://www.facebook.com/rana.gamal" target="_blank"
-                    rel="noopener noreferrer" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-
-                <a href="#" aria-label="Dribbble">
-                    <i class="fa-brands fa-dribbble"></i>
-                </a>
-
-                <a href="https://github.com/rana-gamal" target="_blank"
-                    rel="noopener noreferrer" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-
-                <a href="https://www.linkedin.com/in/rana-gamal-5196/" target="_blank"
-                    rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-
+                <a href="https://www.facebook.com/rana.gamal.5196" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/rana-gamal" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rana-gamal-5196/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:rana.gamal5196@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
 
-        </nav>
+        </div>
 
     </header>
 
 
-    <!-- ================= HOME ================= -->
+    <main class="content">
 
-    <section id="home">
+        <!-- ================= HOME ================= -->
 
-        <div class="main">
+        <section id="home" class="hero">
 
-            <h2 class="head">Welcome</h2>
+            <canvas id="particles" aria-hidden="true"></canvas>
+            <div class="hero_grid" aria-hidden="true"></div>
 
-            <h1 class="name">I'm Rana</h1>
+            <div class="hero_inner">
 
-            <p class="typing">I'm a Front End Developer</p>
+                <!-- Text -->
+                <div class="main">
 
-            <p class="hero_description">
-                I create responsive and user-friendly websites with a focus on clean
-                design and simple experiences.
-            </p>
+                    <h2 class="head reveal">Welcome</h2>
 
-            <a href="#contact" class="btn">Hire Me</a>
+                    <h1 class="name reveal" style="--d:.15s">I'm <span class="grad_text">Rana</span></h1>
 
-        </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about">
-
-        <div class="information">
-
-            <div class="about_title">
-
-                <span class="about_bg">ABOUT ME</span>
-
-                <h2>Know Me More</h2>
-
-            </div>
-
-
-            <div class="about_details">
-
-                <div class="left_content">
-
-                    <h4>
-                        I'm
-                        <span class="my_name">Rana Gamal,</span>
-                        a Web Developer
-                    </h4>
-
-                    <p>
-                        I'm a Front End Developer with a strong interest in creating
-                        clean, user-friendly, and visually appealing websites.
-                        I work with HTML and CSS to build and style web pages, and
-                        I'm currently developing my skills in JavaScript and React.
-
-                        <br><br>
-
-                        I enjoy turning ideas and designs into real websites and
-                        paying attention to details to make the user experience
-                        simple and clear.
-
-                        <br><br>
-
-                        I'm continuously learning and improving my Front End
-                        development skills through practice and personal projects.
-                        I've been working on responsive layouts, Flexbox, CSS
-                        positioning, and interactive elements, while also learning
-                        how to use Git and GitHub to manage my projects.
+                    <p class="typing reveal" style="--d:.3s">
+                        I'm a <span class="typed" id="typed"></span><span class="cursor"></span>
                     </p>
 
-                </div>
-
-
-                <div class="right_content">
-
-                    <p>
-                        <strong>Name:</strong>
-                        Rana Gamal Mohamed
+                    <p class="hero_description reveal" style="--d:.45s">
+                        I create responsive and user-friendly websites with a focus on clean
+                        design and simple experiences.
                     </p>
 
-                    <p>
-                        <strong>Email:</strong>
-                        rana.gamal5196@gmail.com
-                    </p>
-
-                    <p>
-                        <strong>Age:</strong>
-                        22
-                    </p>
-
-                    <p>
-                        <strong>From:</strong>
-                        Assiut, Egypt
-                    </p>
-
-                    <!-- حطي ملف الـ CV في فولدر cv باسم Rana-Gamal-CV.pdf -->
-                    <a href="CV/RANA GAMAL MOHAMED _CV_LL.pdf" download="Rana-Gamal-CV.pdf" class="btn">Download CV</a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= SERVICES ================= -->
-
-    <section id="services">
-
-        <div class="services">
-
-            <div class="services_title">
-
-                <span class="services_bg">SERVICES</span>
-
-                <h2 class="services_heading">What I Do?</h2>
-
-            </div>
-
-
-            <div class="services_content">
-
-                <div class="service">
-
-                    <i class="fas fa-palette"></i>
-
-                    <div>
-
-                        <h4 class="title">Graphic Design</h4>
-
-                        <p>
-                            Creating clean and engaging visual designs that match
-                            your brand and communicate your ideas clearly.
-                        </p>
-
+                    <div class="hero_btns reveal" style="--d:.6s">
+                        <a href="#contact" class="btn primary">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#portfolio" class="btn outline">View My Work</a>
                     </div>
 
                 </div>
 
+                <!-- Code window -->
+                <div class="hero_visual reveal" style="--d:.4s" aria-hidden="true">
 
-                <div class="service">
+                    <div class="float_icon fi1"><i class="fa-brands fa-html5"></i></div>
+                    <div class="float_icon fi2"><i class="fa-brands fa-css3-alt"></i></div>
+                    <div class="float_icon fi3"><i class="fa-brands fa-js"></i></div>
+                    <div class="float_icon fi4"><i class="fa-brands fa-react"></i></div>
 
-                    <i class="fas fa-desktop"></i>
+                    <div class="code_window">
 
-                    <div>
+                        <div class="code_bar">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code_file">portfolio.js</span>
+                        </div>
 
-                        <h4 class="title">Web Design</h4>
-
-                        <p>
-                            Designing modern, responsive websites with a clean
-                            layout and a smooth user experience.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="service">
-
-                    <i class="fas fa-pencil-ruler"></i>
-
-                    <div>
-
-                        <h4 class="title">UI/UX Design</h4>
-
-                        <p>
-                            Creating simple and intuitive interfaces that make
-                            websites and applications easy and enjoyable to use.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="service">
-
-                    <i class="fas fa-paint-brush"></i>
-
-                    <div>
-
-                        <h4 class="title">App Design &amp; Development</h4>
-
-                        <p>
-                            Building responsive and user-friendly applications
-                            with a focus on performance and usability.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="service">
-
-                    <i class="fas fa-chart-area"></i>
-
-                    <div>
-
-                        <h4 class="title">Business Analysis</h4>
-
-                        <p>
-                            Analyzing business needs and processes to help create
-                            practical solutions that improve efficiency.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="service">
-
-                    <i class="fas fa-bullhorn"></i>
-
-                    <div>
-
-                        <h4 class="title">SEO Marketing</h4>
-
-                        <p>
-                            Improving website visibility and helping content reach
-                            the right audience through effective SEO strategies.
-                        </p>
+                        <pre class="code_body"><code id="codeText"></code><span class="code_cursor"></span></pre>
 
                     </div>
 
@@ -302,448 +119,444 @@
 
             </div>
 
-        </div>
+            <a href="#about" class="scroll_down" aria-label="Scroll down">
+                <span></span>
+            </a>
 
-    </section>
+        </section>
 
 
-    <!-- ================= RESUME ================= -->
+        <!-- ================= ABOUT ================= -->
 
-    <section id="resume">
+        <section id="about" class="section">
 
-        <div class="resume">
+            <div class="container">
 
-            <div class="resume_title">
+                <div class="section_title reveal">
+                    <span class="bg_text">ABOUT ME</span>
+                    <h2>Know Me More</h2>
+                </div>
 
-                <span class="resume_bg">SUMMARY</span>
+                <div class="about_details">
 
-                <h2 class="resume_heading">Resume</h2>
+                    <div class="left_content reveal">
+
+                        <h4>
+                            I'm <span class="my_name">Rana Gamal,</span> a Web Developer
+                        </h4>
+
+                        <p>
+                            I'm a Front End Developer with a strong interest in creating
+                            clean, user-friendly, and visually appealing websites.
+                            I work with HTML and CSS to build and style web pages, and
+                            I'm currently developing my skills in JavaScript and React.
+                        </p>
+
+                        <p>
+                            I enjoy turning ideas and designs into real websites and
+                            paying attention to details to make the user experience
+                            simple and clear.
+                        </p>
+
+                        <p>
+                            I'm continuously learning and improving my Front End
+                            development skills through practice and personal projects.
+                            I've been working on responsive layouts, Flexbox, CSS
+                            positioning, and interactive elements, while also learning
+                            how to use Git and GitHub to manage my projects.
+                        </p>
+
+                    </div>
+
+                    <div class="right_content glow reveal" style="--d:.15s">
+
+                        <p><strong>Name:</strong> <span>Rana Gamal Mohamed</span></p>
+                        <p><strong>Email:</strong> <span>rana.gamal5196@gmail.com</span></p>
+                        <p><strong>Age:</strong> <span>22</span></p>
+                        <p><strong>From:</strong> <span>Assiut, Egypt</span></p>
+
+                        <a href="cv/Rana_Gamal_CV.pdf" download class="btn primary">
+                            Download CV <i class="fa-solid fa-download"></i>
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
+        </section>
 
-            <div class="resume_content">
 
-                <!-- ===== Education: الجامعة فوق بخط كبير والكلية تحتها بخط أصغر ===== -->
+        <!-- ================= SERVICES ================= -->
 
-                <div class="education">
+        <section id="services" class="section">
 
-                    <h3>My Education</h3>
+            <div class="container">
 
-                    <div class="resume_item">
+                <div class="section_title reveal">
+                    <span class="bg_text">SERVICES</span>
+                    <h2>What I Do?</h2>
+                </div>
 
-                        <span class="resume_date">
-                            2023 - Present
+                <div class="services_content">
+
+                    <div class="service glow reveal">
+                        <i class="fas fa-palette"></i>
+                        <div>
+                            <h4 class="title">Graphic Design</h4>
+                            <p>Creating clean and engaging visual designs that match your brand and communicate your ideas clearly.</p>
+                        </div>
+                    </div>
+
+                    <div class="service glow reveal" style="--d:.1s">
+                        <i class="fas fa-desktop"></i>
+                        <div>
+                            <h4 class="title">Web Design</h4>
+                            <p>Designing modern, responsive websites with a clean layout and a smooth user experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="service glow reveal" style="--d:.2s">
+                        <i class="fas fa-pen-ruler"></i>
+                        <div>
+                            <h4 class="title">UI/UX Design</h4>
+                            <p>Creating simple and intuitive interfaces that make websites and applications easy and enjoyable to use.</p>
+                        </div>
+                    </div>
+
+                    <div class="service glow reveal">
+                        <i class="fas fa-mobile-screen-button"></i>
+                        <div>
+                            <h4 class="title">App Design &amp; Development</h4>
+                            <p>Building responsive and user-friendly applications with a focus on performance and usability.</p>
+                        </div>
+                    </div>
+
+                    <div class="service glow reveal" style="--d:.1s">
+                        <i class="fas fa-chart-area"></i>
+                        <div>
+                            <h4 class="title">Business Analysis</h4>
+                            <p>Analyzing business needs and processes to help create practical solutions that improve efficiency.</p>
+                        </div>
+                    </div>
+
+                    <div class="service glow reveal" style="--d:.2s">
+                        <i class="fas fa-bullhorn"></i>
+                        <div>
+                            <h4 class="title">SEO Marketing</h4>
+                            <p>Improving website visibility and helping content reach the right audience through effective SEO strategies.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESUME ================= -->
+
+        <section id="resume" class="section">
+
+            <div class="container">
+
+                <div class="section_title reveal">
+                    <span class="bg_text">SUMMARY</span>
+                    <h2>Resume</h2>
+                </div>
+
+                <div class="resume_content">
+
+                    <div class="education">
+
+                        <h3 class="reveal"><i class="fa-solid fa-graduation-cap"></i> My Education</h3>
+
+                        <div class="timeline">
+
+                            <div class="resume_item glow reveal">
+                                <span class="resume_date">2023 - Present</span>
+                                <h4 class="uni_name">Assiut University</h4>
+                                <p class="faculty_name">Business Information Systems</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience">
+
+                        <h3 class="reveal"><i class="fa-solid fa-briefcase"></i> My Experience</h3>
+
+                        <div class="timeline">
+
+                            <div class="resume_item glow reveal" style="--d:.15s">
+                                <span class="resume_date">2026 - Present</span>
+                                <h4>Digital Egypt Pioneers Initiative (DEPI)</h4>
+                                <p class="faculty_name">Front End React Development</p>
+                                <p>
+                                    Developing practical skills in modern front-end development
+                                    using HTML, CSS, JavaScript, React, responsive design,
+                                    Git, and GitHub.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= SKILLS ================= -->
+
+                <div class="skills">
+
+                    <h3 class="reveal"><i class="fa-solid fa-code"></i> My Skills</h3>
+
+                    <div class="skill_content">
+
+                        <div class="skill reveal">
+                            <div class="skill_info"><span>HTML</span><span>70%</span></div>
+                            <div class="progress"><div class="progress_bar" data-width="70"></div></div>
+                        </div>
+
+                        <div class="skill reveal" style="--d:.1s">
+                            <div class="skill_info"><span>CSS</span><span>70%</span></div>
+                            <div class="progress"><div class="progress_bar" data-width="70"></div></div>
+                        </div>
+
+                        <div class="skill reveal">
+                            <div class="skill_info"><span>JavaScript</span><span>50%</span></div>
+                            <div class="progress"><div class="progress_bar" data-width="50"></div></div>
+                        </div>
+
+                        <div class="skill reveal" style="--d:.1s">
+                            <div class="skill_info"><span>Responsive Design</span><span>60%</span></div>
+                            <div class="progress"><div class="progress_bar" data-width="60"></div></div>
+                        </div>
+
+                        <div class="skill reveal">
+                            <div class="skill_info"><span>React</span><span>60%</span></div>
+                            <div class="progress"><div class="progress_bar" data-width="60"></div></div>
+                        </div>
+
+                        <div class="skill reveal" style="--d:.1s">
+                            <div class="skill_info"><span>Flexbox</span><span>80%</span></div>
+                            <div class="progress"><div class="progress_bar" data-width="80"></div></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PORTFOLIO ================= -->
+
+        <section id="portfolio" class="section">
+
+            <div class="container">
+
+                <div class="section_title reveal">
+                    <span class="bg_text">PORTFOLIO</span>
+                    <h2>My Work</h2>
+                </div>
+
+                <div class="portfolio_content">
+
+                    <!-- Project 1 -->
+                    <article class="project glow reveal">
+
+                        <div class="project_img">
+                            <img src="images/My_portfolio.png" alt="Personal Portfolio" loading="lazy" onerror="this.style.display='none'">
+                            <i class="fa-solid fa-user project_fallback"></i>
+
+                            <div class="project_overlay">
+                                <a href="https://github.com/rana-gamal" target="_blank" rel="noopener" aria-label="View code"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="project_info">
+                            <h3>Personal Portfolio</h3>
+                            <p>A responsive personal website to showcase my skills and projects.</p>
+                            <div class="tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project 2: Coffee Shop -->
+                    <article class="project glow reveal" style="--d:.15s">
+
+                        <div class="project_img">
+                            <!-- غيّري اسم الصورة هنا لو مختلف -->
+                            <img src="images/coffe_shop.png" alt="Coffee Shop Website" loading="lazy" onerror="this.style.display='none'">
+                            <i class="fa-solid fa-mug-hot project_fallback"></i>
+
+                            <div class="project_overlay">
+                                <a href="#" target="_blank" rel="noopener" aria-label="View code"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="project_info">
+                            <h3>Coffee Shop</h3>
+                            <p>A modern and responsive coffee shop website with a clean layout.</p>
+                            <div class="tags">
+                                <span>HTML</span><span>CSS</span><span>Responsive</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TESTIMONIAL ================= -->
+
+        <section id="testimonial" class="section">
+
+            <div class="container">
+
+                <div class="section_title reveal">
+                    <span class="bg_text">TESTIMONIAL</span>
+                    <h2>Client Speak</h2>
+                </div>
+
+                <div class="testimonial_content">
+
+                    <div class="testimonial_card glow reveal">
+                        <i class="fa-solid fa-quote-left quote"></i>
+                        <span class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </span>
-
-                        <h4>Assiut University</h4>
-
-                        <p class="resume_sub">Business Information Systems</p>
-
-                        <p>
-                            Studying Business Information Systems with a focus on
-                            programming, databases, systems analysis, and web development.
-                        </p>
-
+                        <p class="feedback">Rana delivered a clean and responsive website with great attention to detail.</p>
+                        <p class="feedback_source">Practice Feedback</p>
                     </div>
 
-                </div>
-
-
-                <!-- ===== Experience: DEPI ===== -->
-
-                <div class="experience">
-
-                    <h3>My Experience</h3>
-
-                    <div class="resume_item">
-
-                        <span class="resume_date">
-                            2026 - Present
+                    <div class="testimonial_card glow reveal" style="--d:.15s">
+                        <i class="fa-solid fa-quote-left quote"></i>
+                        <span class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </span>
+                        <p class="feedback">The website has a clean and modern design. The layout is easy to navigate, and everything feels well organized and user-friendly.</p>
+                        <p class="feedback_source">Practice Feedback</p>
+                    </div>
 
-                        <h4>Digital Egypt Pioneers Initiative (DEPI)</h4>
-
-                        <p class="resume_sub">Front End React Development</p>
-
-                        <p>
-                            Developing practical skills in modern front-end development
-                            using HTML, CSS, JavaScript, React, responsive design,
-                            Git, and GitHub.
-                        </p>
-
+                    <div class="testimonial_card glow reveal" style="--d:.3s">
+                        <i class="fa-solid fa-quote-left quote"></i>
+                        <span class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </span>
+                        <p class="feedback">A modern and responsive design with a clear layout and a smooth user experience.</p>
+                        <p class="feedback_source">Practice Feedback</p>
                     </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <!-- ================= SKILLS ================= -->
+        <!-- ================= CONTACT ================= -->
 
-        <div class="skills">
+        <section id="contact" class="section">
 
-            <h3>My Skills</h3>
+            <div class="container">
 
-            <div class="skill_content">
-
-                <div class="skill">
-
-                    <div class="skill_info">
-                        <span>HTML</span>
-                        <span>70%</span>
-                    </div>
-
-                    <div class="progress">
-                        <div class="progress_bar html"></div>
-                    </div>
-
+                <div class="section_title reveal">
+                    <span class="bg_text">CONTACT</span>
+                    <h2>Get In Touch</h2>
                 </div>
 
+                <div class="contact_content">
 
-                <div class="skill">
+                    <div class="contact_info glow reveal">
 
-                    <div class="skill_info">
-                        <span>CSS</span>
-                        <span>70%</span>
-                    </div>
+                        <h2 class="title">ADDRESS</h2>
 
-                    <div class="progress">
-                        <div class="progress_bar css"></div>
-                    </div>
+                        <div class="address">
+                            <i class="fas fa-location-dot"></i>
+                            <p>Assiut, Egypt</p>
+                        </div>
 
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill_info">
-                        <span>JavaScript</span>
-                        <span>50%</span>
-                    </div>
-
-                    <div class="progress">
-                        <div class="progress_bar javascript"></div>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill_info">
-                        <span>Responsive Design</span>
-                        <span>60%</span>
-                    </div>
-
-                    <div class="progress">
-                        <div class="progress_bar responsive"></div>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill_info">
-                        <span>React</span>
-                        <span>60%</span>
-                    </div>
-
-                    <div class="progress">
-                        <div class="progress_bar react"></div>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill_info">
-                        <span>Flexbox</span>
-                        <span>80%</span>
-                    </div>
-
-                    <div class="progress">
-                        <div class="progress_bar flexbox"></div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= PORTFOLIO ================= -->
-
-    <section id="portfolio">
-
-        <div class="portfolio">
-
-            <div class="portfolio_title">
-
-                <span class="portfolio_bg">PORTFOLIO</span>
-
-                <h2 class="portfolio_heading">My Work</h2>
-
-            </div>
-
-
-            <div class="portfolio_content">
-
-                <!-- ===== مشروع 1: Personal Portfolio ===== -->
-
-                <a class="project" href="https://github.com/rana-gamal" target="_blank"
-                    rel="noopener noreferrer">
-
-                    <img src="images/My_portfolio.png" alt="Personal Portfolio">
-
-                    <div class="project_info">
-
-                        <h3>Personal Portfolio</h3>
-
-                        <p>HTML • CSS • Responsive Design</p>
-
-                    </div>
-
-                </a>
-
-
-                <!-- ===== مشروع 2: Coffee Shop ===== -->
-                <!-- غيّري الصورة من السطر اللي تحت (src) واللينك من href -->
-
-                <a class="project" href="https://github.com/rana-gamal" target="_blank"
-                    rel="noopener noreferrer">
-
-                    <img src="images/coffe_shop.png" alt="Coffee Shop Website">
-
-                    <div class="project_info">
-
-                        <h3>Coffee Shop</h3>
-
-                        <p>HTML • CSS • Responsive Design</p>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= TESTIMONIAL ================= -->
-
-    <section id="testimonial">
-
-        <div class="testimonial">
-
-            <div class="testimonial_title">
-
-                <span class="testimonial_bg">TESTIMONIAL</span>
-
-                <h2 class="testimonial_heading">Client Speak</h2>
-
-            </div>
-
-
-            <div class="testimonial_content">
-
-                <div class="testimonial_card">
-
-                    <span class="stars">
-
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </span>
-
-                    <p class="feedback">
-                        Rana delivered a clean and responsive website
-                        with great attention to detail.
-                    </p>
-
-                    <p class="feedback_source">
-                        Practice Feedback
-                    </p>
-
-                </div>
-
-
-                <div class="testimonial_card">
-
-                    <span class="stars">
-
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </span>
-
-                    <p class="feedback">
-                        The website has a clean and modern design.
-                        The layout is easy to navigate, and everything
-                        feels well organized and user-friendly.
-                    </p>
-
-                    <p class="feedback_source">
-                        Practice Feedback
-                    </p>
-
-                </div>
-
-
-                <div class="testimonial_card">
-
-                    <span class="stars">
-
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </span>
-
-                    <p class="feedback">
-                        A modern and responsive design with a clear layout
-                        and a smooth user experience.
-                    </p>
-
-                    <p class="feedback_source">
-                        Practice Feedback
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact">
-
-        <div class="contact">
-
-            <div class="contact_title">
-
-                <span class="contact_bg">CONTACT</span>
-
-                <h2 class="contact_heading">Get In Touch</h2>
-
-            </div>
-
-
-            <div class="contact_content">
-
-                <div class="contact_info">
-
-                    <h2 class="title">ADDRESS</h2>
-
-                    <div class="address">
-
-                        <i class="fas fa-location-dot"></i>
-
-                        <p>Assiut, Egypt</p>
-
-                    </div>
-
-
-                    <div class="phone">
-
-                        <i class="fas fa-phone"></i>
-
-                        <p>+20-101-350-2202</p>
-
-                    </div>
-
-
-                    <div class="email">
-
-                        <i class="fas fa-envelope"></i>
-
-                        <p>rana.gamal5196@gmail.com</p>
-
-                    </div>
-
-
-                    <h2 class="title">FOLLOW ME</h2>
-
-
-                    <div class="follow">
-
-                        <a href="https://www.facebook.com/rana.gamal.5196" target="_blank"
-                            rel="noopener noreferrer" aria-label="Facebook">
-                            <i class="fab fa-facebook"></i>
+                        <a class="phone" href="tel:+201013502202">
+                            <i class="fas fa-phone"></i>
+                            <p>+20-101-350-2202</p>
                         </a>
 
-                        <a href="https://twitter.com/rana_gamal" target="_blank"
-                            rel="noopener noreferrer" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
+                        <a class="email" href="mailto:rana.gamal5196@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            <p>rana.gamal5196@gmail.com</p>
                         </a>
 
-                        <a href="https://www.instagram.com/rana_gamal/" target="_blank"
-                            rel="noopener noreferrer" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                        <h2 class="title">FOLLOW ME</h2>
 
-                        <a href="https://www.linkedin.com/in/rana-gamal-5196/" target="_blank"
-                            rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-
-                        <a href="https://github.com/rana-gamal" target="_blank"
-                            rel="noopener noreferrer" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                        <div class="follow">
+                            <a href="https://www.facebook.com/rana.gamal.5196" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/rana_gamal" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/rana_gamal/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/rana-gamal-5196/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/rana-gamal" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
 
                     </div>
 
-                </div>
 
+                    <form class="message reveal" id="contactForm" novalidate style="--d:.15s">
 
-                <div class="message">
+                        <h2 class="title">SEND ME A NOTE</h2>
 
-                    <h2 class="title">SEND ME A NOTE</h2>
+                        <div class="note">
+                            <input type="text" id="cName" placeholder="Name" aria-label="Name" required>
+                        </div>
 
-                    <div class="note">
-                        <input type="text" placeholder="Name" aria-label="Name">
-                    </div>
+                        <div class="note">
+                            <input type="email" id="cEmail" placeholder="Email" aria-label="Email" required>
+                        </div>
 
-                    <div class="note">
-                        <input type="email" placeholder="Email" aria-label="Email">
-                    </div>
+                        <div class="note">
+                            <textarea id="cMsg" placeholder="Message" aria-label="Message" required></textarea>
+                        </div>
 
-                    <div class="note">
-                        <textarea placeholder="Message" aria-label="Message"></textarea>
-                    </div>
+                        <button type="submit" class="btn primary">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
 
-                    <button type="button" class="btn">Send Message</button>
+                        <p class="form_status" id="formStatus" role="status"></p>
+
+                    </form>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
 
+        <footer class="footer">
+            <p>© <span id="year"></span> Rana Gamal. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <a href="#home" class="to_top" id="toTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
     <script src="script.js"></script>
 
